@@ -1,0 +1,9 @@
+---
+- name: Install Python Pip
+  remote_user: meraki
+
+  tasks:
+  - name: Install
+  ansible.builtin.shell:
+    cmd: curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    cmd: python3 get-pip.py --user

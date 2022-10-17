@@ -1,0 +1,8 @@
+---
+- name: Install Github CLI
+  hosts: webservers
+  remote_user: meraki
+
+  tasks:
+  - name: Install
+  ansible.builtin.shell: install_gh_cli.sh >> gh_cli_install.txt
